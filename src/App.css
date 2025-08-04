@@ -1,0 +1,371 @@
+/* ===== Global Layout ===== */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #0f0f0f, #1e1e1e);
+  color: #f5f5f5;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* ===== Navbar Styling ===== */
+.navbar {
+  background: linear-gradient(to right, #000000, #111111);
+  border-bottom: 1px solid #333;
+  box-shadow: 0 2px 12px rgba(0, 255, 255, 0.1);
+  padding: 10px 20px;
+}
+
+.navbar-brand {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #00ffee !important;
+  text-shadow: 0 0 10px #00ffee88;
+}
+
+/* === Nav Container Fix === */
+.navbar .navbar-nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-left: auto;
+}
+
+.navbar .nav-link,
+.navbar .btn-outline-light {
+  color: #ddd !important;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  padding: 8px 12px;
+  border-radius: 5px;
+}
+
+.navbar .nav-link:hover,
+.navbar .btn-outline-light:hover {
+  color: #00ffee !important;
+  background-color: #222;
+}
+
+/* ===== Profile Button Styling ===== */
+.profile-button {
+  padding: 6px 14px;
+  border: 1px solid #fff;
+  background: transparent;
+  color: white;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.profile-button:hover {
+  background: #00ffaa;
+  color: black;
+}
+
+/* ===== Titles ===== */
+h1, h2, h3, h5 {
+  text-align: center;
+  color: #00ffaa;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* ===== Card Styling ===== */
+.card {
+  background: linear-gradient(to right, #1c1c1c, #292929);
+  border: none;
+  border-radius: 15px;
+  padding: 25px;
+  color: #f4f4f4;
+  box-shadow: 0 10px 24px rgba(0, 255, 255, 0.08);
+  transition: all 0.3s ease-in-out;
+}
+
+/* ===== Auth Form Styling ===== */
+.auth-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: radial-gradient(circle at top left, #111, #1e1e1e);
+}
+
+.auth-card {
+  background: linear-gradient(145deg, #202020, #292929);
+  padding: 2.5rem;
+  border-radius: 20px;
+  box-shadow: 0 12px 24px rgba(0, 255, 255, 0.05);
+  width: 100%;
+  max-width: 420px;
+  animation: fadeIn 0.7s ease-in-out;
+}
+
+.auth-input {
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 8px;
+  border: 1px solid #444;
+  background-color: #2a2a2a;
+  color: #fff;
+  margin-bottom: 1rem;
+  transition: all 0.3s ease;
+  font-size: 0.95rem;
+}
+
+.auth-input:focus {
+  border-color: #00ffee;
+  background-color: #1f1f1f;
+  box-shadow: 0 0 5px #00ffee99;
+  outline: none;
+}
+
+.auth-btn {
+  width: 100%;
+  background: linear-gradient(to right, #00ffee, #00ccaa);
+  color: #111;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  padding: 12px 16px;
+  transition: all 0.3s ease-in-out;
+  font-size: 1rem;
+}
+
+.auth-btn:hover {
+  background: linear-gradient(to right, #00ffaa, #007070);
+  color: #fff;
+}
+
+.auth-error {
+  background-color: #ff3e3e;
+  padding: 10px;
+  color: #fff;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  text-align: center;
+  font-weight: bold;
+}
+
+.toggle-text {
+  margin-top: 1rem;
+  text-align: center;
+  color: #aaa;
+}
+
+.switch-btn {
+  background: none;
+  border: none;
+  color: #00ffee;
+  font-weight: bold;
+  cursor: pointer;
+  padding-left: 5px;
+  transition: color 0.3s ease;
+}
+
+.switch-btn:hover {
+  color: #00ddcc;
+}
+
+/* ===== Buttons & Alerts ===== */
+button {
+  font-weight: bold;
+  border-radius: 8px;
+  padding: 10px 24px;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+}
+
+.btn-success,
+.btn-primary,
+.btn-danger {
+  background: linear-gradient(to right, #00ffee, #007070);
+  color: #111;
+  border: none;
+}
+
+.btn-success:hover,
+.btn-primary:hover,
+.btn-danger:hover {
+  background: linear-gradient(to right, #00ffaa, #004444);
+  color: #fff;
+}
+
+.alert-danger {
+  background-color: #ff4d4d;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 12px;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* ===== Profile Popup ===== */
+#profilePopup {
+  background: linear-gradient(to right, #1f1f1f, #2f2f2f);
+  border: 1px solid #444;
+  color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  width: 220px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  position: absolute;
+  right: 20px;
+  top: 60px;
+  z-index: 999;
+  display: none;
+  text-align: center;
+}
+
+#profilePopup img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  border: 2px solid #00ffee;
+}
+
+/* ===== Home Page Styling ===== */
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+}
+
+.home-banner {
+  width: 100%;
+  max-width: 900px;
+  margin-bottom: 2rem;
+}
+
+.home-image {
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 255, 255, 0.1);
+}
+
+.home-content {
+  max-width: 700px;
+  text-align: center;
+}
+
+.home-title {
+  font-size: 2.5rem;
+  color: #28a745;
+  font-weight: bold;
+}
+
+.home-subtitle {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  color: #ddd;
+}
+
+.home-features {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 1.5rem;
+  font-size: 1.1rem;
+  color: #ccc;
+}
+
+.home-features li {
+  margin: 0.5rem 0;
+}
+
+/* ===== Chat & Output Boxes ===== */
+pre {
+  background: #121212;
+  color: #eee;
+  border: 1px solid #444;
+  border-radius: 8px;
+  padding: 16px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  font-family: 'Courier New', monospace;
+  margin-top: 10px;
+}
+
+pre::-webkit-scrollbar {
+  height: 6px;
+}
+pre::-webkit-scrollbar-thumb {
+  background-color: #00ffaa;
+  border-radius: 4px;
+}
+
+/* ===== History List ===== */
+.list-group-item {
+  background: #1a1a1a;
+  border: 1px solid #444;
+  color: #f0f0f0;
+  transition: background 0.2s ease;
+}
+
+.list-group-item:hover {
+  background: #262626;
+}
+
+/* ===== Animation ===== */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.96); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .card {
+    width: 90% !important;
+    margin: auto;
+  }
+
+  .auth-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .navbar-nav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .navbar .nav-link,
+  .profile-button {
+    width: 100%;
+    text-align: left;
+  }
+}
+
+/* ===== Custom Fixes ===== */
+.card {
+  background-color: #1c1f26;
+  color: white;
+  border: 1px solid #444;
+}
+
+.progress-bar {
+  font-weight: bold;
+}
+
+.profile-popup-container {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+}
+
+.profile-dropdown {
+  background: #1c1c1c;
+  border: 1px solid #555;
+  border-radius: 8px;
+  padding: 10px;
+  position: absolute;
+  top: 40px;
+  right: 0;
+  color: white;
+  z-index: 100;
+  text-align: center;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+}
